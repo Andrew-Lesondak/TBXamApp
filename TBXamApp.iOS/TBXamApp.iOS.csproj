@@ -122,6 +122,9 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\FontAwesome6Solid.otf" />
+    <BundleResource Include="Resources\FontAwesome6Brands.otf" />
+    <BundleResource Include="Resources\FontAwesome6Regular.otf" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

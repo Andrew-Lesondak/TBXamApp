@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TBXamApp.Views.AboutPage"
              xmlns:vm="clr-namespace:TBXamApp.ViewModels"
+             xmlns:fontawesome="clr-namespace:FontAwesome"
              Title="{Binding Title}">
     
     <ContentPage.BindingContext>
@@ -45,7 +46,20 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
-            </StackLayout>
+
+        <Label Text="{x:Static fontawesome:FontAwesomeIcons.SyncAlt}"
+               FontFamily="{StaticResource FontAwesomeSolid}"
+               FontSize="Large"
+               HorizontalTextAlignment="Center"/>
+        <Label Text="{x:Static fontawesome:FontAwesomeIcons.AddressBook}"
+               FontFamily="{StaticResource FontAwesomeSolid}"
+               FontSize="Large" 
+               HorizontalTextAlignment="Center"/>
+        <Label Text="{x:Static fontawesome:FontAwesomeIcons.ArrowAltCircleDown}"
+               FontFamily="{StaticResource FontAwesomeRegular}"
+               FontSize="Large" 
+               HorizontalTextAlignment="Center"/>
+    </StackLayout>
         </ScrollView>
     </Grid>
 
