@@ -17,8 +17,12 @@ namespace TBXamApp
             MainPage = new AppShell();
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
+            await MainPage.DisplayAlert(
+                "Welcome!",
+                "Tube Buddy is your best friend on the road to YouTube success.",
+                "Let's Go!");
         }
 
         protected override void OnSleep()
