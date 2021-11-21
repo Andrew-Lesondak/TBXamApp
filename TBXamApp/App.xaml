@@ -7,23 +7,27 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+
             <OnPlatform x:TypeArguments="x:String" 
                 x:Key="FontAwesomeBrands">
                 <On Platform="Android" Value="FontAwesome6Brands.otf#Regular" />
                 <On Platform="iOS" Value="FontAwesome6Brands" />
             </OnPlatform>
+
             <OnPlatform x:TypeArguments="x:String" 
                 x:Key="FontAwesomeSolid">
                 <On Platform="Android" Value="FontAwesome6Solid.otf#Regular" />
                 <On Platform="iOS" Value="FontAwesome6Solid" />
             </OnPlatform>
+
             <OnPlatform x:TypeArguments="x:String" 
                 x:Key="FontAwesomeRegular">
                 <On Platform="Android" Value="FontAwesome6Regular.otf#Regular" />
                 <On Platform="iOS" Value="FontAwesome6Regular" />
             </OnPlatform>
 
-            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Primary">#e13029</Color>
+
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">

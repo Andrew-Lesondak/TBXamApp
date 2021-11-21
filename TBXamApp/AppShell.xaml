@@ -2,7 +2,6 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:TBXamApp.Views"
-       xmlns:fontawesome="clr-namespace:FontAwesome"
        Title="TBXamApp"
        x:Class="TBXamApp.AppShell">
 
@@ -17,13 +16,13 @@
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.ForegroundColor" Value="Green" />
-                <Setter Property="Shell.TitleColor" Value="Orange" />
+                <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="Green" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="Purple"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="Red"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="LimeGreen"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="White"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#5552eb"/>
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
@@ -39,6 +38,7 @@
                 </FontImageSource>
             </ShellContent.Icon>
         </ShellContent>
+
         <ShellContent Title="Devic Info" ContentTemplate="{DataTemplate local:ItemsPage}">
             <ShellContent.Icon>
                 <FontImageSource

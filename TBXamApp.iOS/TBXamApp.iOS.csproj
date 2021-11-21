@@ -125,6 +125,12 @@
     <BundleResource Include="Resources\FontAwesome6Solid.otf" />
     <BundleResource Include="Resources\FontAwesome6Brands.otf" />
     <BundleResource Include="Resources\FontAwesome6Regular.otf" />
+    <BundleResource Include="Resources\logo%403x.jpg" />
+    <BundleResource Include="Resources\logo%401x.jpg" />
+    <BundleResource Include="Resources\logo%402x.jpg" />
+    <BundleResource Include="Resources\logo_large%401x.png" />
+    <BundleResource Include="Resources\logo_large%402x.png" />
+    <BundleResource Include="Resources\logo_large%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -144,5 +150,8 @@
       <Project>{53C7938E-3971-440B-B7FD-E0F22AF362FA}</Project>
       <Name>TBXamApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Assets.xcassets\" />
   </ItemGroup>
 </Project>
