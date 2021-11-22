@@ -19,10 +19,22 @@ namespace TBXamApp
 
         protected override async void OnStart()
         {
-            await MainPage.DisplayAlert(
-                "Welcome!",
-                "Tube Buddy is your best friend on the road to YouTube success.",
-                "Let's Go!");
+            string isUser = "";
+            if(Application.Current.Properties.TryGetValue("currentUser", out object value))
+            {
+                isUser = value.ToString();
+            }
+
+            if (isUser == "")
+            {
+                Application.Current.Properties["currentUser"] = "true";
+                await Application.Current.SavePropertiesAsync();
+
+                await MainPage.DisplayAlert(
+                    "Welcome!",
+                    "Tube Buddy is your best friend on the road to YouTube success.",
+                    "Let's Go!");
+            }
         }
 
         protected override void OnSleep()
