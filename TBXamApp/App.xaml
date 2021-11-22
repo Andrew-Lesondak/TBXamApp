@@ -8,28 +8,19 @@
     <Application.Resources>
         <ResourceDictionary>
 
-            <OnPlatform x:TypeArguments="x:String"
-                        x:Key="FontAwesomeBrands">
-                <On Platform="Android"
-                    Value="FontAwesome6Brands.otf#Regular" />
-                <On Platform="iOS"
-                    Value="FontAwesome6Brands-Regular" />
+            <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeBrands">
+                <On Platform="Android" Value="FontAwesome6Brands.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome6Brands-Regular" />
             </OnPlatform>
 
-            <OnPlatform x:TypeArguments="x:String"
-                        x:Key="FontAwesomeSolid">
-                <On Platform="Android"
-                    Value="FontAwesome6Solid.otf#Regular" />
-                <On Platform="iOS"
-                    Value="FontAwesome6Free-Solid" />
+            <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeSolid">
+                <On Platform="Android" Value="FontAwesome6Solid.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome6Free-Solid" />
             </OnPlatform>
 
-            <OnPlatform x:TypeArguments="x:String"
-                        x:Key="FontAwesomeRegular">
-                <On Platform="Android"
-                    Value="FontAwesome6Regular.otf#Regular" />
-                <On Platform="iOS"
-                    Value="FontAwesome6Free-Regular" />
+            <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeRegular">
+                <On Platform="Android" Value="FontAwesome6Regular.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome6Free-Regular" />
             </OnPlatform>
 
             <Color x:Key="Primary">#e13029</Color>
