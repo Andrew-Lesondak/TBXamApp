@@ -15,24 +15,10 @@ namespace TBXamApp.Views
 {
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel viewModel;
-
         public ItemsPage()
         {
             InitializeComponent();
-
-            //viewModel.Navigation = Navigation;
-            BindingContext = viewModel = new ItemsViewModel();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            //viewModel.OnAppearing();
-        }
-
-        void Button_Clicked(System.Object sender, System.EventArgs e)
-        {
+            BindingContext = new ItemsViewModel(Navigation);
         }
     }
 }

@@ -5,6 +5,11 @@ namespace TBXamApp.Framework
 {
     public class AppConstants
     {
-        public IList DeviceItems;
+        public enum DeviceDetails
+        {
+            Connectivity,
+            DeviceInfo,
+            DisplayInfo
+        }
     }
 }

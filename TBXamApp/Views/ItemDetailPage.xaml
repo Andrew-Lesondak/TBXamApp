@@ -5,11 +5,40 @@
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
-        <!--<Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Text}" FontSize="Small"/>
-        <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Description}" FontSize="Small"/>-->
-        <Label Text="TEST" />
+        <Label Text="{Binding SelectedText}" FontSize="Medium"/>
+
+        <StackLayout IsVisible="{Binding DeviceInfoEnabled}"
+                     IsEnabled="{Binding DeviceInfoEnabled}"
+                     x:Name="DeviceInfoStack">
+            <Label Text="{Binding Device}" FontSize="Small"/>
+            <Label Text="{Binding Manufacturer}" FontSize="Small"/>
+            <Label Text="{Binding DeviceName}" FontSize="Small"/>
+            <Label Text="{Binding Version}" FontSize="Small"/>
+            <Label Text="{Binding Platform}" FontSize="Small"/>
+            <Label Text="{Binding Idiom}" FontSize="Small"/>
+            <Label Text="{Binding DeviceType}" FontSize="Small"/>
+        </StackLayout>
+
+        <StackLayout IsVisible="{Binding DisplayInfoEnabled}"
+                     IsEnabled="{Binding DisplayInfoEnabled}"
+                     x:Name="DisplayInfoStack">
+            <Label Text="{Binding Orientation}" FontSize="Small"/>
+            <Label Text="{Binding Rotation}" FontSize="Small"/>
+            <Label Text="{Binding Width}" FontSize="Small"/>
+            <Label Text="{Binding Height}" FontSize="Small"/>
+            <Label Text="{Binding Density}" FontSize="Small"/>
+        </StackLayout>
+
+        <StackLayout IsVisible="{Binding ConnectivityInfoEnabled}"
+                     IsEnabled="{Binding ConnectivityInfoEnabled}"
+                     x:Name="ConnectivityInfoStack">
+            <Label Text="{Binding ConnectionType}" FontSize="Small"/>
+        </StackLayout>
+
+        <Button Text="Dismiss"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Command="{Binding DismissModal}"/>
     </StackLayout>
     
 </ContentPage>
