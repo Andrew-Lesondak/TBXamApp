@@ -30,20 +30,20 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Spin Me" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}">
-            <ShellContent.Icon>
-                <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
-                    Glyph="">
-                </FontImageSource>
-            </ShellContent.Icon>
-        </ShellContent>
-
         <ShellContent Title="Devic Info" ContentTemplate="{DataTemplate local:ItemsPage}">
             <ShellContent.Icon>
                 <FontImageSource
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     Glyph="">
+                </FontImageSource>
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent Title="Spin Me" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="">
                 </FontImageSource>
             </ShellContent.Icon>
         </ShellContent>

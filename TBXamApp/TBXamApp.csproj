@@ -12,9 +12,13 @@
   <ItemGroup>
     <None Remove="Utils\" />
     <None Remove="Assets\" />
+    <None Remove="Framework\" />
+    <None Remove="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
     <Folder Include="Assets\" />
+    <Folder Include="Framework\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>

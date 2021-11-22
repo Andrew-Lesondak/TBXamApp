@@ -7,14 +7,29 @@
              xmlns:model="clr-namespace:TBXamApp.Models"  
              x:Name="BrowseItemsPage">
 
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
+
+    <StackLayout>
+        <Picker x:Name="picker"
+                Title="Select your data"
+                TitleColor="Red"
+                ItemsSource="{Binding DetailList}"
+                ItemDisplayBinding="{Binding Text}"/>
+
+        <Button Text="View Details"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Command="{Binding ViewDetails}"/>
+
+    </StackLayout>
+
     <!--
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     -->
-    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+    <!--<RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
         <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 SelectionMode="None">
@@ -40,5 +55,5 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </RefreshView>
+    </RefreshView>-->
 </ContentPage>
