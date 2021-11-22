@@ -4,41 +4,52 @@
              x:Class="TBXamApp.Views.ItemDetailPage"
              Title="{Binding Title}">
 
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="{Binding SelectedText}" FontSize="Medium"/>
+    <StackLayout Margin="20" Padding="0, 50, 0, 0">
+
+        <Label
+            Text="{Binding SelectedText}"
+            FontSize="Large"
+            TextColor="{StaticResource Primary}"
+            Margin="0, 0, 0, 20"/>
 
         <StackLayout IsVisible="{Binding DeviceInfoEnabled}"
                      IsEnabled="{Binding DeviceInfoEnabled}"
-                     x:Name="DeviceInfoStack">
-            <Label Text="{Binding Device}" FontSize="Small"/>
-            <Label Text="{Binding Manufacturer}" FontSize="Small"/>
-            <Label Text="{Binding DeviceName}" FontSize="Small"/>
-            <Label Text="{Binding Version}" FontSize="Small"/>
-            <Label Text="{Binding Platform}" FontSize="Small"/>
-            <Label Text="{Binding Idiom}" FontSize="Small"/>
-            <Label Text="{Binding DeviceType}" FontSize="Small"/>
+                     x:Name="DeviceInfoStack"
+                     Margin="0, 0, 0, 20">
+            <Label Text="{Binding Device}" FontSize="Medium"/>
+            <Label Text="{Binding Manufacturer}" FontSize="Medium"/>
+            <Label Text="{Binding DeviceName}" FontSize="Medium"/>
+            <Label Text="{Binding Version}" FontSize="Medium"/>
+            <Label Text="{Binding Platform}" FontSize="Medium"/>
+            <Label Text="{Binding Idiom}" FontSize="Medium"/>
+            <Label Text="{Binding DeviceType}" FontSize="Medium"/>
         </StackLayout>
 
         <StackLayout IsVisible="{Binding DisplayInfoEnabled}"
                      IsEnabled="{Binding DisplayInfoEnabled}"
-                     x:Name="DisplayInfoStack">
-            <Label Text="{Binding Orientation}" FontSize="Small"/>
-            <Label Text="{Binding Rotation}" FontSize="Small"/>
-            <Label Text="{Binding Width}" FontSize="Small"/>
-            <Label Text="{Binding Height}" FontSize="Small"/>
-            <Label Text="{Binding Density}" FontSize="Small"/>
+                     x:Name="DisplayInfoStack"
+                     Margin="0, 0, 0, 20">
+            <Label Text="{Binding Orientation}" FontSize="Medium"/>
+            <Label Text="{Binding Rotation}" FontSize="Medium"/>
+            <Label Text="{Binding Width}" FontSize="Medium"/>
+            <Label Text="{Binding Height}" FontSize="Medium"/>
+            <Label Text="{Binding Density}" FontSize="Medium"/>
         </StackLayout>
 
         <StackLayout IsVisible="{Binding ConnectivityInfoEnabled}"
                      IsEnabled="{Binding ConnectivityInfoEnabled}"
-                     x:Name="ConnectivityInfoStack">
-            <Label Text="{Binding ConnectionType}" FontSize="Small"/>
+                     x:Name="ConnectivityInfoStack"
+                     Margin="0, 0, 0, 20">
+            <Label Text="{Binding ConnectionType}" FontSize="Medium"/>
         </StackLayout>
 
         <Button Text="Dismiss"
-                VerticalOptions="CenterAndExpand"
+                VerticalOptions="Center"
                 HorizontalOptions="Center"
-                Command="{Binding DismissModal}"/>
+                Command="{Binding DismissModal}"
+                Margin="20"
+                Padding="10"/>
+
     </StackLayout>
     
 </ContentPage>

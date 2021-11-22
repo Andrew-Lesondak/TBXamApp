@@ -7,19 +7,22 @@
              xmlns:model="clr-namespace:TBXamApp.Models"  
              x:Name="BrowseItemsPage">
 
-    <StackLayout>
+    <StackLayout Margin="20" Padding="0, 50, 0, 0">
+
         <Picker x:Name="picker"
                 Title="Select your data"
-                TitleColor="Red"
+                TitleColor="{StaticResource Primary}"
                 ItemsSource="{Binding DetailList}"
                 ItemDisplayBinding="{Binding Text}"
                 SelectedItem="{Binding SelectedItem}"/>
 
         <Button Text="View Details"
-                VerticalOptions="CenterAndExpand"
+                VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Command="{Binding ViewDetails}"
-                IsEnabled="{Binding IsDetailsBtnEnabled}"/>
+                IsEnabled="{Binding IsDetailsBtnEnabled}"
+                Margin="20"
+                Padding="10"/>
 
     </StackLayout>
 </ContentPage>

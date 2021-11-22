@@ -8,40 +8,35 @@
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
-    
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <StackLayout Margin="20" Padding="0, 50, 0, 0">
 
-        <StackLayout>
+        <Label
+            x:Name="spinLabel"
+            Text="{Binding LabelText}"
+            FontSize="40"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Rotation="{Binding SliderRotation}"
+            Margin="30"
+            TextColor="{StaticResource Primary}"/>
 
-            <Label
-                x:Name="spinLabel"
-                Text="{Binding LabelText}"
-                FontSize="40"
-                HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand"
-                Rotation="{Binding SliderRotation}"/>
+        <Entry
+            x:Name="sliderEntry"
+            Text="{Binding EntryText, Mode=TwoWay}"
+            Placeholder="Enter text then spin me!"
+            Margin="0, 10, 0, 0"/>
 
-            <Entry
-                x:Name="sliderEntry"
-                Text="{Binding EntryText, Mode=TwoWay}"
-                Placeholder="Enter text then spin me!"/>
+        <Slider x:Name="textSlider"
+                Maximum="360"
+                Minimum="0"
+                Value="{Binding SliderRotation, Mode=TwoWay}"
+                IsEnabled="{Binding EnableSlider}"
+                Margin="0, 10, 0, 0"
+                MaximumTrackColor="#f9d2d2"
+                MinimumTrackColor="{StaticResource Primary}"
+                ThumbColor="{StaticResource Primary}" />
 
-            <Slider x:Name="textSlider"
-                    Maximum="360"
-                    Value="{Binding SliderRotation, Mode=TwoWay}"
-                    IsEnabled="{Binding EnableSlider}"/>
-
-        </StackLayout>
-    </Grid>
+    </StackLayout>
 
 </ContentPage>
