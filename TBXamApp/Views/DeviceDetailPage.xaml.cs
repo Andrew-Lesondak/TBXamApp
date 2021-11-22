@@ -5,12 +5,12 @@ using TBXamApp.Models;
 
 namespace TBXamApp.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class DeviceDetailPage : ContentPage
     {
-        public ItemDetailPage(DeviceDetail selectedItem)
+        public DeviceDetailPage(DeviceDetail selectedItem)
         {
             InitializeComponent();
-            BindingContext = new ItemDetailViewModel(Navigation, selectedItem);
+            BindingContext = new DeviceDetailViewModel(Navigation, selectedItem);
         }
     }
 }

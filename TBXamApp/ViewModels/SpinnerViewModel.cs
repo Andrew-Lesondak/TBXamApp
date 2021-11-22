@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace TBXamApp.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class SpinnerViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public SpinnerViewModel()
         {
             Title = "Text Spinner";
         }

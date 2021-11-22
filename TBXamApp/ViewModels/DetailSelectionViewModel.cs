@@ -7,11 +7,11 @@ using System.Windows.Input;
 
 namespace TBXamApp.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class DetailSelectionViewModel : BaseViewModel
     {
         // Not ideal solution. Seems to be how Xamarin works by design.
         // TODO: Switch to a framework that handles this better.
-        public ItemsViewModel(INavigation navigation)
+        public DetailSelectionViewModel(INavigation navigation)
         {
             MockDataStore dataStore = new MockDataStore();
             SetPickerItems(dataStore);
@@ -20,7 +20,7 @@ namespace TBXamApp.ViewModels
 
             ViewDetails = new Command(async () => {
 
-                await Navigation.PushModalAsync(new ItemDetailPage(SelectedItem));
+                await Navigation.PushModalAsync(new DeviceDetailPage(SelectedItem));
             });
         }
 

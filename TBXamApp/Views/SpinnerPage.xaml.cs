@@ -6,12 +6,12 @@ using Xamarin.Forms.Xaml;
 
 namespace TBXamApp.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class SpinnerPage : ContentPage
     {
-        public AboutPage()
+        public SpinnerPage()
         {
             InitializeComponent();
-            BindingContext = new AboutViewModel();
+            BindingContext = new SpinnerViewModel();
         }
     }
 }

@@ -13,12 +13,12 @@ using TBXamApp.ViewModels;
 
 namespace TBXamApp.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class DetailSelectionPage : ContentPage
     {
-        public ItemsPage()
+        public DetailSelectionPage()
         {
             InitializeComponent();
-            BindingContext = new ItemsViewModel(Navigation);
+            BindingContext = new DetailSelectionViewModel(Navigation);
         }
     }
 }

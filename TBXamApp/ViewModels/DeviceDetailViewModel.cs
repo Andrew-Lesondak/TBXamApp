@@ -10,9 +10,9 @@ using System.Collections.Generic;
 
 namespace TBXamApp.ViewModels
 {
-    public class ItemDetailViewModel : BaseViewModel
+    public class DeviceDetailViewModel : BaseViewModel
     {
-        public ItemDetailViewModel(INavigation navigation, DeviceDetail selectedItem)
+        public DeviceDetailViewModel(INavigation navigation, DeviceDetail selectedItem)
         {
             MockDataStore dataStore = new MockDataStore();
             DismissModal = new Command(async () => await navigation.PopModalAsync());

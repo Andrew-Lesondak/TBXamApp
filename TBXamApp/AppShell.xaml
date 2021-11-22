@@ -24,7 +24,7 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="Spin Text" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}">
+        <ShellContent Title="Spin Text" Route="SpinnerPage" ContentTemplate="{DataTemplate local:SpinnerPage}">
             <ShellContent.Icon>
                 <FontImageSource
                     FontFamily="{StaticResource FontAwesomeSolid}"
@@ -33,7 +33,7 @@
             </ShellContent.Icon>
         </ShellContent>
 
-        <ShellContent Title="Devic Info" ContentTemplate="{DataTemplate local:ItemsPage}">
+        <ShellContent Title="Devic Info" ContentTemplate="{DataTemplate local:DetailSelectionPage}">
             <ShellContent.Icon>
                 <FontImageSource
                     FontFamily="{StaticResource FontAwesomeSolid}"
