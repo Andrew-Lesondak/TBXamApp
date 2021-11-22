@@ -131,6 +131,17 @@
     <BundleResource Include="Resources\logo_large%401x.png" />
     <BundleResource Include="Resources\logo_large%402x.png" />
     <BundleResource Include="Resources\logo_large%403x.png" />
+    <BundleResource Include="Resources\fa-solid-900.woff2" />
+    <BundleResource Include="Resources\fa-solid-900.woff" />
+    <BundleResource Include="Resources\fa-solid-900.ttf" />
+    <BundleResource Include="Resources\fa-solid-900.eot" />
+    <BundleResource Include="Resources\fa-regular-400.woff2" />
+    <BundleResource Include="Resources\fa-regular-400.woff" />
+    <BundleResource Include="Resources\fa-regular-400.ttf" />
+    <BundleResource Include="Resources\fa-regular-400.eot" />
+    <BundleResource Include="Resources\fa-brands-400.woff2" />
+    <BundleResource Include="Resources\fa-brands-400.ttf" />
+    <BundleResource Include="Resources\fa-brands-400.eot" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

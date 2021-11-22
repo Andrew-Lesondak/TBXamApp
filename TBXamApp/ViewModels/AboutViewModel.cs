@@ -12,6 +12,8 @@ namespace TBXamApp.ViewModels
             Title = "Text Spinner";
         }
 
+        #region Properties
+
         string entryText = "";
         public string EntryText
         {
@@ -82,7 +84,9 @@ namespace TBXamApp.ViewModels
                 return sliderRotation;
             }
         }
+        #endregion
 
+        #region Methods
         public void HandleSliderState(string entryText)
         {
             if (entryText == "")
@@ -95,5 +99,6 @@ namespace TBXamApp.ViewModels
                 EnableSlider = true;
             }
         }
+        #endregion
     }
 }

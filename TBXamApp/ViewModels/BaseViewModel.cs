@@ -12,6 +12,7 @@ namespace TBXamApp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        #region Properties
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
         bool isBusy = false;
@@ -27,7 +28,9 @@ namespace TBXamApp.ViewModels
             get { return title; }
             set { SetProperty(ref title, value); }
         }
+        #endregion
 
+        #region Methods
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",
             Action onChanged = null)
@@ -40,6 +43,7 @@ namespace TBXamApp.ViewModels
             OnPropertyChanged(propertyName);
             return true;
         }
+        #endregion
 
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;

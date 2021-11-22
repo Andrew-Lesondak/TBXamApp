@@ -12,6 +12,16 @@ namespace TBXamApp.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
+        public ItemDetailViewModel(INavigation navigation, DeviceDetail selectedItem)
+        {
+            MockDataStore dataStore = new MockDataStore();
+            DismissModal = new Command(async () => await navigation.PopModalAsync());
+
+            SelectedText = selectedItem.Text;
+            SelectDisplayContent(selectedItem.Text);
+        }
+
+        #region Properties
         public ICommand DismissModal { private set; get; }
         public string SelectedText { get; set; }
 
@@ -112,16 +122,9 @@ namespace TBXamApp.ViewModels
             get { return "Connection Type: " + connectionType; }
             set { connectionType = value; }
         }
+        #endregion
 
-        public ItemDetailViewModel(INavigation navigation, DeviceDetail selectedItem)
-        {
-            MockDataStore dataStore = new MockDataStore();
-            DismissModal = new Command(async () => await navigation.PopModalAsync());
-
-            SelectedText = selectedItem.Text;
-            SelectDisplayContent(selectedItem.Text);
-        }
-
+        #region Methods
         public void SelectDisplayContent(string selected)
         {
             switch (selected)
@@ -216,5 +219,6 @@ namespace TBXamApp.ViewModels
                 ConnectionType = "None";
             }
         }
+        #endregion
     }
 }
